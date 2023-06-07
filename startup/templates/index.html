@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  type="text/css"  href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="{% static 'images/2.png' %}" alt="this is my logo" class="logo">
+                <nav>
+                    <ul>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <li><a href="{% url 'home' %}"><b>Home</b></a></li>
+                        <li><a href="{% url 'about' %}"><b>About</b></a></li>
+                        <li><a href="{% url 'prediction' %}"><b>Prediction</b></a></li>
+                        <li><a href="{% url 'contact' %}"><b>Contact Us</b></a></li>
+                    </ul>
+                
+                </nav>
+             
+            </div>
+            <div class="content">
+                <div class="h1">
+                    <h1><b>START UP <br>PREDICTION</b></h1> 
+                </div>
+
+                <div class="p">
+                    <p><b><span style="color:#8B8000;">Get valuable insights into the success potential of your startup</span></p>
+                </div>
+                <br>
+                <br>
+                <br>
+                
+                
+            </div>
+            <div>
+            <img src="{% static 'images/home.png' %}" class="feature-image">
+            </div>
+        </div>
+        <div>
+            <a class="icon" style="margin-top:10px;" href="{% url 'prediction' %}">Predict Now</a>
+        </div>
+
+        
+      
+        
+        <script src="" async defer></script>
+    </body>
+</html>

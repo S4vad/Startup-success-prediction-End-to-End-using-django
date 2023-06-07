@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/prediction.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="{% static 'images/2.png' %}" alt="this is my logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'home' %}"><b>Home</b></a></li>
+                        <li><a href="{% url 'about' %}"><b>About</b></a></li>
+                        <li><a href="{% url 'prediction' %}"><b>Prediction</b></a></li>
+                        <li><a href="{% url 'contact' %}"><b>Contact Us</b></a></li>
+                    </ul>
+                
+                </nav>
+             
+            </div>
+            <div class="content">
+                <!-- <div class="h1">
+                    <h1><b>Prediction</b</h1>
+                </div> -->
+                <div class="form">
+                    {% if result %}
+                        <h1>Startup is{{result}}</h1>
+                    {% endif %}
+                    
+                    <form method="POST" action="">
+
+                        {% csrf_token %}
+                        Age first funding year:<input type="number" name="age_first_funding_year" placeholder="Age first funding year" required class='d'><br>
+                        Age first funding year:<input type="number" name="age_last_funding_year" placeholder="Age first funding year" required class='e'><br>
+                        Relationships:<input type="number" name="relationships" placeholder="Relationships" required class='f'><br>
+                        Funding rounds:<input type="number" name="funding_rounds" placeholder="Funding rounds" required class='g'><br>
+                        Funding total usd:<input type="number" name="funding_total_usd" placeholder="Funding total usd" required class='h'><br>
+                        Milestones:<input type="number" name="milestones" placeholder="Milestones" required class='i'><br>
+                        Has VC:
+                        <select name='Has_VC' class='j'>
+                            <option value='Yes'>Yes</option>
+                            <option value='No'>No</option>
+                        </select>
+                        <br>
+                        Has angel:
+                        <select name='Has_angel' class='k'>
+                            <option value='Yes'>Yes</option>
+                            <option value='No'>No</option>
+                        </select>
+                        <br>
+                        Round:
+                        <select name='Round' id='Round' class='l'>
+                            <option value='has_roundA'>roundA</option>
+                            <option value='has_roundB'>roundB</option>
+                            <option value='has_roundC'>roundC</option>
+                            <option value='has_roundD'>roundD</option>
+                        </select>
+                        <br>
+                 
+                        participants:<input type="number" name="avg_participants" placeholder="participants" required class='m'><br>
+                        Is top500 :
+                        <select name='Is_Top500' class='n'>
+                            <option value='Yes'>Yes</option>
+                            <option value='No'>No</option>
+                        </select>
+
+                        Company Type:
+                        <select name='Company_Type' id='Company_Type' class='p'>
+                            <option value='software'>software</option>
+                            <option value='web'>web</option>
+                            <option value='mobile'>mobile</option>
+                            <option value='advertising'>advertising</option>
+                            <option value='games_video'>games_video</option>
+                            <option value='enterprise'>enterprise</option>
+                            <option value='semiconductor'>semiconductor</option>
+                            <option value='biotech'>biotech</option>
+                            <option value='network_hosting'>network_hosting</option>
+                            <option value='ecommerce'>ecommerce</option>
+                            <option value='hardware'>hardware</option>
+                            <option value='other_category'>other_category</option>
+
+                        </select>
+                        <br>
+                        <input type="submit">
+                
+                    </form>
+                
+                </div>
+                
+
+                
+            </div>
+
+                
+        
+        </div>
+
+        
+      
+        
+        <script src="" async defer></script>
+    </body>
+</html>

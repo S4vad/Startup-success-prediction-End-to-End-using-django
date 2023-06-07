@@ -1,0 +1,26 @@
+.h1{font-size: 60px;
+font-weight: 100;
+margin-top: 350px;
+color: #2D2B79;
+
+text-align: center;
+
+}
+
+
+*{
+    background-color:whitesmoke ;
+
+
+}
+
+.link{
+    margin-top: 140px;
+    margin-left: 700px;
+    text-decoration: none;
+    padding: 15px;
+    color: #000;
+    background-color: rgb(76, 188, 200);
+    font-size: 20px;
+    border-radius: 10px;
+}
